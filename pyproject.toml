@@ -1,0 +1,25 @@
+[project]
+name = "pycro-rts"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Kenneth Hill",email = ""}
+]
+readme = "README.md"
+
+[tool.poetry]
+packages = [{include = "pycro-rts", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+stable-baselines3 = "^2.0"
+numpy = "^1.26"
+
+[tool.poetry.scripts]
+train = "src.train:main"
+evaluate = "src.evaluate:main"
+promote = "src.promote:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
