@@ -14,11 +14,9 @@ packages = [{include = "pycro-rts", from = "src"}]
 python = "^3.12"
 stable-baselines3 = "^2.0"
 numpy = "^1.26"
-
-[tool.poetry.scripts]
-train = "src.train:main"
-evaluate = "src.evaluate:main"
-promote = "src.promote:main"
+matplotlib = ""
+gymnasium = ""
+torch = ""
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
