@@ -12,7 +12,7 @@ ALL16x16_MAPS = [
     "maps/16x16/basesWorkers16x16C.xml",
     "maps/16x16/basesWorkers16x16G.xml",
     "maps/16x16/basesWorkers16x16K.xml",
-    # "maps/16x16/basesWorkers16x16.xml",
+    "maps/16x16/basesWorkers16x16.xml",
     "maps/16x16/TwoBasesBarracks16x16.xml",
     "maps/16x16/basesWorkers16x16D.xml",
     "maps/16x16/basesWorkers16x16H.xml",
