@@ -16,7 +16,7 @@ stable-baselines3 = "^2.0"
 numpy = "^1.26"
 matplotlib = ""
 gymnasium = ""
-torch = ""
+torch = {url = "https://files.pythonhosted.org/packages/6e/ab/07739fd776618e5882661d04c43f5b5586323e2f6a2d7d84aac20d8f20bd/torch-2.9.1-cp312-none-macosx_11_0_arm64.whl"}
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
