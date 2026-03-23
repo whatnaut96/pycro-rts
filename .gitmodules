@@ -1,0 +1,6 @@
+[submodule "pycro_rts/microrts"]
+    path = pycro_rts/microrts
+    url = https://github.com/Farama-Foundation/MicroRTS.git
+[submodule "src/pycro_rts/microrts"]
+	path = src/pycro_rts/microrts
+	url = https://github.com/Farama-Foundation/MicroRTS.git

@@ -14,7 +14,7 @@ from jpype.imports import registerDomain
 from jpype.types import JArray, JInt
 from PIL import Image
 
-import gym_microrts
+import pycro_rts 
 
 MICRORTS_CLONE_MESSAGE = """
 WARNING: the repository does not include the microrts git submodule.
@@ -74,7 +74,7 @@ class MicroRTSGridModeVecEnv:
             ), "if multiple maps are provided, they should be provided for each environment"
         self.reward_weight = reward_weight
 
-        self.microrts_path = os.path.join(gym_microrts.__path__[0], "microrts")
+        self.microrts_path = os.path.join(pycro_rts.__path__[0], "microrts")
 
         # prepare training maps
         self.cycle_maps = list(map(lambda i: os.path.join(self.microrts_path, i), cycle_maps))
@@ -89,7 +89,7 @@ class MicroRTSGridModeVecEnv:
             if os.path.exists(f"{self.microrts_path}/microrts.jar"):
                 os.remove(f"{self.microrts_path}/microrts.jar")
             print(f"building {self.microrts_path}/microrts.jar...")
-            root_dir = os.path.dirname(gym_microrts.__path__[0])
+            root_dir = os.path.dirname(pycro_rts.__path__[0])
             print(root_dir)
             subprocess.run(["bash", "build.sh", "&>", "build.log"], cwd=f"{root_dir}")
 
@@ -319,7 +319,7 @@ class MicroRTSBotVecEnv(MicroRTSGridModeVecEnv):
         self.reward_weight = reward_weight
 
         # read map
-        self.microrts_path = os.path.join(gym_microrts.__path__[0], "microrts")
+        self.microrts_path = os.path.join(pycro_rts.__path__[0], "microrts")
         if not os.path.exists(f"{self.microrts_path}/README.md"):
             print(MICRORTS_CLONE_MESSAGE)
             os.system(f"git submodule update --init --recursive")
@@ -329,7 +329,7 @@ class MicroRTSBotVecEnv(MicroRTSGridModeVecEnv):
             if os.path.exists(f"{self.microrts_path}/microrts.jar"):
                 os.remove(f"{self.microrts_path}/microrts.jar")
             print(f"building {self.microrts_path}/microrts.jar...")
-            root_dir = os.path.dirname(gym_microrts.__path__[0])
+            root_dir = os.path.dirname(pycro_rts.__path__[0])
             print(root_dir)
             subprocess.run(["bash", "build.sh", "&>", "build.log"], cwd=f"{root_dir}")
 
